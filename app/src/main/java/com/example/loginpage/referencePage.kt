@@ -109,7 +109,7 @@ fun OtpScreen(
             repeat(maxLength) { index ->
                 TextField(
                     value = if (index < otpValue.length) otpValue[index].toString() else "",
-                    onValueChange = { /* Handled in the parent TextField */ },
+                    onValueChange = { },
                     modifier = Modifier
                         .weight(1f)
                         .padding(horizontal = 4.dp)

@@ -141,7 +141,7 @@ fun reference() {
         Spacer(modifier = Modifier.weight(1f))
 
         Button(
-            onClick = { /* Handle continue click */ },
+            onClick = {  },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp),
