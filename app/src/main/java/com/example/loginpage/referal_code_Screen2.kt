@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
-class referencescreen() : ComponentActivity() {
+class referal_code_screen2() : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -23,7 +23,7 @@ class referencescreen() : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = Color.White
                 ) {
-                    reference()
+                    reference2()
                 }
             }
         }
@@ -32,7 +32,7 @@ class referencescreen() : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun reference() {
+fun reference2() {
     var firstName by remember { mutableStateOf("") }
     var lastName by remember { mutableStateOf("") }
     var referralCode by remember { mutableStateOf("") }
@@ -92,7 +92,7 @@ fun reference() {
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     unfocusedBorderColor = Color.LightGray,
 
-                ),
+                    ),
                 shape = RoundedCornerShape(8.dp)
             )
 
@@ -105,7 +105,7 @@ fun reference() {
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     unfocusedBorderColor = Color.LightGray,
 
-                ),
+                    ),
                 shape = RoundedCornerShape(8.dp)
             )
         }
@@ -145,15 +145,15 @@ fun reference() {
             onClick = {  },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(48.dp),
+                .height(50.dp),
             shape = RoundedCornerShape(8.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF98389C)
-            )
+                containerColor = Color.LightGray
+            ),
+
         ) {
             Text("Continue",
-                fontFamily = FontFamily.SansSerif,
-                color = Color.White
+                fontFamily = FontFamily.SansSerif
             )
 
         }
@@ -161,6 +161,6 @@ fun reference() {
 }
 //@Preview(showBackground = true)
 //@Composable
-//fun preview6(){
-//    reference()
+//fun preview4(){
+//    reference2()
 //}

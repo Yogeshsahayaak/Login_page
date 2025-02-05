@@ -25,25 +25,19 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.font.FontFamily
-import com.example.loginpage.nav.AppNavHost
+import androidx.navigation.NavHostController
 
-
-class MainActivity : ComponentActivity() {
+class login_screen2 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
-            AppNavHost()
-
+            LoginScreen2()
         }
     }
 }
 
 @Composable
-fun LoginScreen(
-    onContinueClick: (String) -> Unit,
-
-    ) {
+fun LoginScreen2() {
     var phoneNumber by remember { mutableStateOf("") }
 
     Column(
@@ -141,19 +135,18 @@ fun LoginScreen(
 
 
         Button(
-            onClick = {    onContinueClick ("9540627248")},
+            onClick = {  },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(50.dp),
+                .height(48.dp),
             shape = RoundedCornerShape(8.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color.LightGray
-            ),
-            enabled = phoneNumber.length == 10
+                containerColor = Color(0xFF98389C)
+            )
         ) {
-            Text(
-                "Continue",
-                fontFamily = FontFamily.SansSerif
+            Text("Continue",
+                fontFamily = FontFamily.SansSerif,
+                color = Color.White
             )
 
 
@@ -181,12 +174,10 @@ fun LoginScreen(
         }
     }
 }
-
-//
 //@Preview(showBackground = true)
 //@Composable
-//fun preview() {
-//    LoginScreen()
+//fun login_screen(){
+//    LoginScreen2()
 //}
 
 

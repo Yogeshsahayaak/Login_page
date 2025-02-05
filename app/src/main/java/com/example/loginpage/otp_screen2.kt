@@ -24,11 +24,11 @@ import androidx.navigation.NavHostController
 import com.example.loginpage.R
 
 
-class referencePage() : ComponentActivity() {
+class otp_screen2() : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            OtpScreen(
+            OtpScreen2(
                 phoneNumber = "9891851352",
                 onContinueClick = { otp -> println("OTP Entered: $otp") },
                 onEditNumber = { println("Edit Number Clicked") }
@@ -36,7 +36,7 @@ class referencePage() : ComponentActivity() {
     }
 }
 @Composable
-fun OtpScreen(
+fun OtpScreen2(
     phoneNumber: String,
     onContinueClick: (String) -> Unit,
     onEditNumber: () -> Unit
@@ -145,7 +145,7 @@ fun OtpScreen(
         )
 
         TextButton(
-            onClick = { /* Handle resend OTP */ },
+            onClick = { },
             modifier = Modifier.padding(top = 16.dp)
         ) {
             Text(
@@ -162,19 +162,18 @@ fun OtpScreen(
         Spacer(modifier = Modifier.weight(1f))
 
         Button(
-            onClick = { if (isValidOtp) onContinueClick(otpValue) },
+            onClick = {  },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(56.dp),
+                .height(48.dp),
             shape = RoundedCornerShape(8.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = if (isValidOtp) Color(0xFF9333EA) else Color.LightGray,
-                contentColor = Color.White
-            ),
-            enabled = isValidOtp
+                containerColor = Color(0xFF98389C)
+            )
         ) {
-            Text("Continue", fontSize = 16.sp,
-                fontFamily = FontFamily.SansSerif
+            Text("Continue",
+                fontFamily = FontFamily.SansSerif,
+                color = Color.White
             )
         }
 
@@ -206,8 +205,8 @@ fun OtpScreen(
 }
 //@Preview(showBackground = true)
 //@Composable
-//fun OtpScreenPreview() {
-//    OtpScreen(
+//fun OtpScreenPreview2() {
+//    OtpScreen2(
 //        phoneNumber = "9891851352",
 //        onContinueClick = {},
 //        onEditNumber = {}
