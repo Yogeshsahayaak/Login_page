@@ -53,6 +53,7 @@ fun AppNavHost() {
 
         composable(route = NavigationItem.Referral.route) {
             reference2()
+
         }
     }
 }
